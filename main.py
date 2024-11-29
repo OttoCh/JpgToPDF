@@ -15,7 +15,7 @@ for filename in os.listdir(inputDir):
         filesize = os.path.getsize(inputDir + '/' + filename)
         if(filesize > filesizeTreshold):
             print("reduce image size: " + str(filesize))
-            targetImage.thumbnail(thumbnailScale, Image.ANTIALIAS)
+            targetImage.thumbnail(thumbnailScale, Image.LANCZOS )
         resultPdf = targetImage.convert('RGB')
         pdfFilename = filename.replace('.jpg', '.pdf').replace('.png', '.pdf').replace('.jpeg', '.pdf');
         resultPdf.save(outputDir + '/' + pdfFilename)

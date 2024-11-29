@@ -4,7 +4,7 @@ Currently only support `jpg`, `jpeg`, `png` file extension.
 
 ### Required Package
 
-> pip install PIL
+> pip install pillow
 
 ### Usage
 
